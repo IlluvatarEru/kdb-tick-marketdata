@@ -1,5 +1,8 @@
-/q tick/r.q [host]:port[:usr:pwd] [host]:port[:usr:pwd]
-/2008.09.09 .k ->.q
+/ RTDB
+/// launch using the below command:
+/// q tick/r.q [host]:port[:usr:pwd] [host]:port[:usr:pwd]
+
+"Starting kdb-tick-marketdata RTDB on port ",.z.X[5]
 
 / Checks the operating system, and if it is not Windows, the appropriate OS command is invoked to sleep for one second.
 / This is required as the RDB will soon try to establish a connection to the TP and a non-Windows OS may need some time
