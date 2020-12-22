@@ -17,7 +17,7 @@ C:/dev/kdb-tick-marketdata/
 ├── TPlogs/
 └── tick.q
 └── README.md
-````
+```
 
 To setup the kdb instances, open your command line and go to `C:/dev/kdb-tick-marketdata`
 - to start the TP, run: `q tick.q sym C:/dev/kdb-tick-marketdata/TPlogs -p 5000`
@@ -28,7 +28,7 @@ To setup the kdb instances, open your command line and go to `C:/dev/kdb-tick-ma
 Tables are defined in `tick/sym.q`.
 
 ## How does it work?
-You need to setup a Feedhandler that writes data to the TP. The RTDB subscribes to the TP and the data in the TP is published to the RTDB.
+You need to setup a Feedhandler (like https://github.com/Arthurim/feedHandlerMarketData) that writes data to the TP. The RTDB subscribes to the TP and the data in the TP is published to the RTDB.
 At the end of the day the RTDB data is rolled to the HDB. You can create realtime applications that subscribe to the TP as well. 
 
 In case the RTDB goes down just restart it and it will replay the TP log files located in `TPlogs/`
