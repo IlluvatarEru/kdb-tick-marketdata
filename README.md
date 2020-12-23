@@ -5,7 +5,7 @@ It is an adaptation from https://github.com/KxSystems/kdb-tick/tree/master/tick 
 
 ## Set up
 
-This project expects you ot have `kdb+/q` installed and the below folder structure:
+This project expects you to have `kdb+/q` installed and the below folder structure:
 
 ```
 C:/dev/kdb-tick-marketdata/
@@ -31,7 +31,7 @@ Tables are defined in `tick/sym.q`.
 You need to setup a Feedhandler (like https://github.com/Arthurim/feedHandlerMarketData) that writes data to the TP. The RTDB subscribes to the TP and the data in the TP is published to the RTDB.
 At the end of the day the RTDB data is rolled to the HDB. You can create realtime applications that subscribe to the TP as well. 
 
-In case the RTDB goes down just restart it and it will replay the TP log files located in `TPlogs/`
+In case the RTDB goes down just restart it and it will replay the TP log files located in `TPlogs/`.
 
 
 NB: The RTDB is in memory so it's fast to be queried while the HDB is partitioned so when querying it, always filter by `date` and `sym` first.
