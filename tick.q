@@ -2,7 +2,7 @@
 /// launch using the below command:
 /// q tick.q sym C:/dev/kdb-tick-marketdata/TPlogs -p 5000
 
-"Starting kdb-tick-marketdata TP on port ",.z.X
+"Starting kdb-tick-marketdata TP on port ",.z.X[5]
 
 system"l tick/",(src:first .z.x,enlist"sym"),".q"
 
